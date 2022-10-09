@@ -8,5 +8,4 @@ WORKDIR /e2e
 COPY . .
 END
 
-cat $2
-ls
+docker build -t $4 .

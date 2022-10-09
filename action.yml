@@ -13,6 +13,10 @@ inputs:
     description: 'Cypress version'
     required: true
     default: '10.9.0'
+  tags:
+    description: 'Docker tags'
+    required: true
+    default: 'cy:cy'
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -20,3 +24,4 @@ runs:
     - ${{ inputs.context }}
     - ${{ inputs.dockerfile }}
     - ${{ inputs.cypress_version }}
+    - ${{ inputs.tags }}
