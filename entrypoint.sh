@@ -9,3 +9,4 @@ COPY . .
 END
 
 docker build -t $4 .
+docker push $4
