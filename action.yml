@@ -2,11 +2,21 @@ name: 'Cypress build and push'
 description: 'Prepare your Cypress tests to run in the cloud'
 inputs:
   context:
-    description: 'Who to greet'
+    description: 'Cypress folder'
     required: true
     default: '.'
+  dockerfile:
+    description: 'Dockerfile name'
+    required: true
+    default: 'Dockerfile'
+  cypress_version:
+    description: 'Cypress version'
+    required: true
+    default: '10.9.0'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.context }}
+    - ${{ inputs.dockerfile }}
+    - ${{ inputs.cypress_version }}
