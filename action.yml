@@ -1,5 +1,5 @@
-name: 'Cypress build and push'
-description: 'Prepare your Cypress tests to run in the cloud'
+name: 'Cypress tests Dockerfile generator'
+description: 'Generate Cypress included Dockerfile to build an image with your tests'
 inputs:
   context:
     description: 'Cypress folder'
@@ -12,7 +12,6 @@ inputs:
   cypress_version:
     description: 'Cypress version'
     required: true
-    default: '10.9.0'
 runs:
   using: 'docker'
   image: 'Dockerfile'
