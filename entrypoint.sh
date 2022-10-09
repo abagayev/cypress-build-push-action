@@ -7,6 +7,3 @@ FROM cypress/included:$3
 WORKDIR /e2e
 COPY . .
 END
-
-docker build -t $4 .
-docker push $4
