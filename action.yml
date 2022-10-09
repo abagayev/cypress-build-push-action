@@ -1,0 +1,12 @@
+name: 'Cypress build and push'
+description: 'Prepare your Cypress tests to run in the cloud'
+inputs:
+  context:
+    description: 'Who to greet'
+    required: true
+    default: '.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.context }}
